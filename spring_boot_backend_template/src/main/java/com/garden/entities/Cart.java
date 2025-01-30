@@ -20,23 +20,20 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cart extends BaseEntity{
-	
-	
 		
+		@Column(name="cart_id")
+		private Long cid;
 		
-		@Column(name="Cart_id")
-		private Long Cid;
-		
-		@Column(name = "quantity", nullable = false)
+		@Column(nullable = false)
 		private int quantity;
 		
-		@Column(name = "ProductName",nullable = false)
+		@Column(name = "product_name",nullable = false)
 		private String pname;
 		
-		@Column(name = "PricePerProduct",nullable = false)
+		@Column(nullable = false)
 		private int price;
 		
-		@Column(name = "bill", nullable = false)
+		@Column(nullable = false)
 		private double bill;
 		
 		@OneToOne

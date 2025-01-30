@@ -19,12 +19,16 @@ public class Product extends BaseEntity {
 	
 	@Column(name = "p_name", nullable = false, length = 30)
 	private String pname;
+	
 	@Column(name = "p_price", nullable = false)
 	private int price;
-	@Column(name = "availableQuantity", nullable = false)
+	
+	@Column(nullable = false)
 	private int availableQuantity;
+	
 	@Column(name = "url")
 	private String imageUrl;
+	
 	@Lob
 	private byte[] image;
 	
